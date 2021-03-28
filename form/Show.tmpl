@@ -1,0 +1,15 @@
+{{ define "Show" }}
+    {{ template "Header" }}
+        <div class="edit-container">
+            <div class="new-container">
+                <h2>ID User : {{ .Name }}</h2>
+                <form method="" action="">
+                    <input type="hidden" name="uid" value="{{ .Id }}" />
+                    <label> Name </label><input type="text" name="name" value="{{ .Name }}" /><br />
+                    <label> City </label><input type="text" name="city" value="{{ .City }}" /><br />
+                    <a href="/edit?id={{ .Id }}">Edit</a>
+                </form>
+            </div>
+        </div>
+    {{ template "Footer" }}
+{{ end }}

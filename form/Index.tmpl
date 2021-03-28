@@ -1,0 +1,48 @@
+{{ define "Index" }}
+    {{ template "Header" }}
+        <div class="index-container">
+            <h1>Golang Mysql CRUD Example</h1>
+            <form action="" method="POST" class="index-form">
+                <input type="text" class="input-search" placeholder="search" />
+            </form>
+            <table border="1" cellspacing="5" cellpadding="5">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>City</td>
+                        <td>View</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range . }}
+                        <tr>
+                            <td>{{ .Id }}</td>
+                            <td>{{ .Name }}</td>
+                            <td>{{ .City }}</td>
+                            <td>
+                                <a href="/show?id={{ .Id }}" target="_blank">View</a>
+                            </td>
+                            <td>
+                                <a href="/edit?id={{ .Id }}">Edit</a>
+                            </td>
+                            <td>
+                                <a href="/delete?id={{ .Id }}">Delete</a>
+                            </td>
+                        </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+            <div class="pagination">
+                <ul>
+                    <li><a href="?page=1">1</a></li>
+                    <li><a href="?page=2">2</a></li>
+                    <li><a href="?page=3">3</a></li>
+                    <li><a href="?page=4">4</a></li>
+                </ul>
+            </div>
+        </div>
+    {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,81 @@
+{{ define "Header" }}
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>CRUD - Golang Mysql </title>
+        <meta charset="UTF-8" />
+        <style>
+        *{
+            margin: auto;
+            padding: auto;
+            font-family: calibri;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu-container{
+            margin: 10px 20px 0;
+        }
+        .index-container{
+            width: 50%;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        h1{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        form.index-form{
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .input-search{
+            width: 128px;
+            height: 21px;
+        }
+        table{
+            width: 100% !important;
+        }
+        table thead{
+            font-weight: bold;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;   
+        }
+        .pagination ul{
+            padding-inline-start: 0px;
+            
+        }
+        .pagination ul li{
+            display: inline;
+            padding-left: 10px;
+            list-style-type: none;
+        }
+
+        .new-container{
+            border: 1px solid black;
+            width: 280px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .new-container h2{
+            margin-bottom: 18px;
+        }
+        .new-container input{
+            margin-bottom: 15px;
+        }
+        .new-container input[type="text"]{
+            height: 20px;
+            width: 90%;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="menu-container">
+        <a href="/">Home</a> | 
+        <a href="/new">New</a>
+    </div>
+{{ end }}
